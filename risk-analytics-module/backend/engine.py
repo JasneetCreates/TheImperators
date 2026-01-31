@@ -41,6 +41,7 @@ class TrustEngine:
         if score >= 40: return "Read-Only"
         return "Contained"
 
+
     def get_confidence_band(self, score: int) -> str:
         if score >= 80: return "GREEN"
         if score >= 60: return "YELLOW"
