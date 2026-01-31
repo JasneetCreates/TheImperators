@@ -20,7 +20,8 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get('http://127.0.0.1:8000/trust-score');
+      const res = await axios.get('/api/trust-score');
+
       setData(res.data);
     } catch (e) {
       console.error("Failed to fetch trust score", e);

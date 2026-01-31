@@ -15,7 +15,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(router)
+app.include_router(router, prefix="/api")
+
 
 # Mount Frontend Static Files (Run 'npm run build' in frontend first)
 # Checks if the directory exists to avoid errors during dev if not built

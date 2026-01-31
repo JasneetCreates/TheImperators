@@ -6,9 +6,9 @@ const SimulationPanel: React.FC<{ onUpdate: () => void }> = ({ onUpdate }) => {
     const injectEvent = async (type: string) => {
         try {
             if (type === 'reset') {
-                await axios.post('http://127.0.0.1:8000/simulate/reset');
+                await axios.post('/api/simulate/reset');
             } else {
-                await axios.post('http://127.0.0.1:8000/simulate/event', {
+                await axios.post('/api/simulate/event', {
                     event_type: type,
                     severity: 'high'
                 });
